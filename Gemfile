@@ -26,7 +26,7 @@ gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
   gem "cypress-rails"
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "debug", platforms: %i[mri mingw x64_mingw]
   gem "dotenv-rails"
   gem "faker"
   gem "pry-rails"
@@ -38,10 +38,13 @@ end
 
 group :development do
   gem "annotate"
+  gem "brakeman"
+  gem "bundler-audit"
   gem "erb_lint", require: false
   gem "htmlbeautifier"
   gem "listen"
   gem "rack-mini-profiler"
+  gem "ruby_audit"
   gem "web-console"
 end
 
