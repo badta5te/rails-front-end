@@ -44,6 +44,9 @@ group :development do
   gem "htmlbeautifier"
   gem "listen"
   gem "rack-mini-profiler"
+  gem "rubocop"
+  gem "rubocop-rails"
+  gem "rubocop-rspec"
   gem "ruby_audit"
   gem "web-console"
 end
