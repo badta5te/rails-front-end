@@ -15,8 +15,7 @@ class ShoppingCartsController < ApplicationController
   end
 
   # GET /shopping_carts/1 or /shopping_carts/1.json
-  def show
-  end
+  def show; end
 
   # GET /shopping_carts/new
   def new
@@ -24,8 +23,7 @@ class ShoppingCartsController < ApplicationController
   end
 
   # GET /shopping_carts/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /shopping_carts or /shopping_carts.json
   def create

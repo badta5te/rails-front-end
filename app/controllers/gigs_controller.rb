@@ -15,8 +15,7 @@ class GigsController < ApplicationController
   end
 
   # GET /gigs/1 or /gigs/1.json
-  def show
-  end
+  def show; end
 
   # GET /gigs/new
   def new
@@ -24,8 +23,7 @@ class GigsController < ApplicationController
   end
 
   # GET /gigs/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /gigs or /gigs.json
   def create

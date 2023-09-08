@@ -37,11 +37,12 @@ class Ticket < ApplicationRecord
   def toggle_for(user)
     return unless user
     return if self.user && self.user != user
+
     case status
     when "unsold"
-      update(status: "held", user: user)
+      update(status: "held", user:)
     when "held"
-      update(status: "unsold", user: user)
+      update(status: "unsold", user:)
     end
   end
 end

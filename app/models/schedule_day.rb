@@ -10,7 +10,7 @@ class ScheduleDay
   include ActiveModel::Model
   attr_accessor :day, :concerts, :hidden
 
-  def initialize(day, concerts, hidden = false)
+  def initialize(day, concerts, hidden = false) # rubocop:disable Style/OptionalBooleanParameter
     @day = day
     @concerts = concerts
     @hidden = hidden
@@ -22,6 +22,7 @@ class ScheduleDay
 
   def day_of?(string)
     return false unless string
+
     day == Date.parse(string)
   end
 

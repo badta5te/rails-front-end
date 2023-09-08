@@ -15,8 +15,7 @@ class TicketOrdersController < ApplicationController
   end
 
   # GET /ticket_orders/1 or /ticket_orders/1.json
-  def show
-  end
+  def show; end
 
   # GET /ticket_orders/new
   def new
@@ -24,8 +23,7 @@ class TicketOrdersController < ApplicationController
   end
 
   # GET /ticket_orders/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /ticket_orders or /ticket_orders.json
   def create

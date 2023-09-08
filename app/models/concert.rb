@@ -25,15 +25,15 @@ class Concert < ApplicationRecord
   belongs_to :venue
 
   has_many :gigs,
-    -> { order(order: :asc) },
-    dependent: :destroy,
-    inverse_of: :concert
+           -> { order(order: :asc) },
+           dependent: :destroy,
+           inverse_of: :concert
 
   has_many :bands, through: :gigs
   has_many :tickets, dependent: :destroy
 
-  enum ilk: {concert: "concert", meet_n_greet: "meet_n_greet", battle: "battle"}
-  enum access: {general: "general", members: "members", vips: "vips"}
+  enum ilk: { concert: "concert", meet_n_greet: "meet_n_greet", battle: "battle" }
+  enum access: { general: "general", members: "members", vips: "vips" }
 
   def start_day
     start_time.to_date
@@ -56,7 +56,7 @@ class Concert < ApplicationRecord
   end
 
   def sell_out!
-    tickets.update_all(status: :purchased, user: User.hoarder)
+    tickets.update_all(status: :purchased, user: User.hoarder) # rubocop:disable Rails/SkipsModelValidations
   end
 
   def find_ticket_at(row:, number:)

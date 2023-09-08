@@ -15,8 +15,7 @@ class BandsController < ApplicationController
   end
 
   # GET /bands/1 or /bands/1.json
-  def show
-  end
+  def show; end
 
   # GET /bands/new
   def new
@@ -24,8 +23,7 @@ class BandsController < ApplicationController
   end
 
   # GET /bands/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /bands or /bands.json
   def create

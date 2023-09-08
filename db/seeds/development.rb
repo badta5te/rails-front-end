@@ -31,7 +31,7 @@ GENRES = [
   "Surf"
 ].freeze
 
-ActiveRecord::Base.transaction do
+ActiveRecord::Base.transaction do # rubocop:disable Metrics/BlockLength
   Favorite.delete_all
   ShoppingCart.delete_all
   Ticket.delete_all

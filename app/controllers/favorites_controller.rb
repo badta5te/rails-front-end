@@ -18,7 +18,9 @@ class FavoritesController < ApplicationController
     redirect_to(:root)
   end
 
-  private def favorite_params
+  private
+
+  def favorite_params
     params.require(:concert_id)
   end
 end

@@ -6,7 +6,7 @@
 # We make no guarantees that this code is fit for any purpose.
 # Visit https://pragprog.com/titles/nrclient2 for more book information.
 #---
-ActiveRecord::Base.transaction do
+ActiveRecord::Base.transaction do # rubocop:disable Metrics/BlockLength
   Gig.delete_all
   Ticket.delete_all
   Concert.delete_all
@@ -45,11 +45,11 @@ ActiveRecord::Base.transaction do
       name: "#{band.name} In Concert",
       description: "#{band.name} In Concert",
       start_time: Date.parse("2021-04-10 19:00") + index + 1,
-      venue: venue,
+      venue:,
       ilk: "concert",
       access: "general",
       genre_tags: band.genre_tags,
-      gigs: [Gig.create(band: band, order: 1, duration_minutes: 60)]
+      gigs: [Gig.create(band:, order: 1, duration_minutes: 60)]
     )
 
     concert.venue.rows.times do |row_number|
